@@ -1,11 +1,12 @@
 'use script';
 
 const name = "Генератор защитного поля";
+let price = 1000;
 
-let price;
-price = 1000;
+
+
+console.log(`Выбран: ${name} - цена за штуку ${price} кредитов`);
+
 price = 2000;
 
-const store = `Выбран: ${name} - цена за штуку ${price} кредитов`;
-
-console.log(store);
+console.log(`Выбран: ${name} - цена за штуку ${price} кредитов`);

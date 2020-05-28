@@ -1,33 +1,32 @@
 "use script";
 
-let price;
-let country = prompt("Введите вашу страну:");
+const country = prompt("Введите вашу страну:");
 
-country = country.toLowerCase();
+if (country === null) {
+  console.log("Отменено пользователем");
+} else {
+  switch (country.toLowerCase()) {
+    case "китай":
+      console.log("Доставка в Китай будет стоить 100 кредитов.");
+      break;
 
-switch (country) {
-  case "китай":
-    price = 100;
-    break;
+    case "чили":
+      console.log("Доставка в Чили будет стоить 250 кредитов.");
+      break;
 
-  case "чили":
-    price = 250;
-    break;
+    case "австралия":
+      console.log("Доставка в Австралию будет стоить 170 кредитов.");
+      break;
 
-  case "австралия":
-    price = 170;
-    break;
+    case "индия":
+      console.log("Доставка в Индию будет стоить 80 кредитов.");
+      break;
 
-  case "индия":
-    price = 80;
-    break;
+    case "ямайка":
+      console.log("Доставка в Ямайку будет стоить 120 кредитов.");
+      break;
 
-  case "ямайка":
-    price = 120;
-    break;
-
-  default:
-    alert("В вашей стране доставка не доступна");
+    default:
+      alert("В вашей стране доставка не доступна");
+  }
 }
-
-console.log(`Доставка в '${country}' будет стоить '${price}' кредитов.`);

@@ -3,14 +3,19 @@
 let input;
 let total = 0;
 
-do {
-  input = prompt("Enter the number");
-  input = Number(input);
-  const isNumber = Number.isNaN(input);
-  if (isNumber === true) {
-    continue;
-  }
-  total += input;
-} while (input !== 0);
+while (input !== null) {
+  input = prompt('Введите число:');
 
-console.log(`Sum total ${total}`);
+  if (input !== null) {
+    input = Number(input);
+
+    if (Number.isNaN(input)) {
+      alert('Было введено не число, попробуйте еще раз');
+      continue;
+    }
+
+    total += input;
+  }
+}
+
+alert(`Общая сума чисел равна: ${total}`);
