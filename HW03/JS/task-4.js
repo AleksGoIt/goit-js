@@ -5,7 +5,6 @@ const countTotalSalary = function (employees) {
   for (const employee in employees) {
     total += employees[employee];
   }
-
   return total;
 };
 
