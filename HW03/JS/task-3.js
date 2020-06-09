@@ -1,18 +1,15 @@
-"use script";
-
 const findBestEmployee = function (employees) {
-  let numberOfTasks = 0;
-  for (let value of Object.values(employees)) {
-    if (numberOfTasks < value) {
-      numberOfTasks = value;
+  let max = 0;
+  let bestEmployee;
+
+  for (const employee in employees) {
+    if (employees[employee] > max) {
+      max = employees[employee];
+      bestEmployee = employee;
     }
   }
-  const entries = Object.entries(employees);
-  for (let entrie of entries) {
-    if (entrie.includes(numberOfTasks)) {
-      return entrie[0];
-    }
-  }
+
+  return bestEmployee;
 };
 
 console.log(
@@ -21,7 +18,7 @@ console.log(
     david: 35,
     helen: 1,
     lorence: 99,
-  })
+  }),
 );
 
 console.log(
@@ -29,7 +26,7 @@ console.log(
     poly: 12,
     mango: 17,
     ajax: 4,
-  })
+  }),
 );
 
 console.log(
@@ -38,5 +35,5 @@ console.log(
     david: 21,
     kiwi: 19,
     chelsy: 38,
-  })
+  }),
 );

@@ -1,5 +1,3 @@
-"use script";
-
 const countTotalSalary = function (employees) {
   let total = 0;
   for (const employee in employees) {

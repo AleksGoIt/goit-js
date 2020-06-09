@@ -1,5 +1,3 @@
-"use script";
-
 const products = [
   { name: "Радар", price: 1300, quantity: 4 },
   { name: "Сканер", price: 2700, quantity: 3 },
@@ -8,13 +6,13 @@ const products = [
 ];
 
 const calculateTotalPrice = function (allProdcuts, productName) {
-  let total = 0;
+  // let total = 0;
   for (let product of allProdcuts) {
     if (product.name === productName) {
-      return (total = product.price * product.quantity);
+      return product.price * product.quantity;
     }
   }
-  return (total = "No such product");
+  // return (total = "No such product");
 };
 
 console.log(calculateTotalPrice(products, "Радар"));

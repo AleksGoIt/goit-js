@@ -1,5 +1,3 @@
-"use script";
-
 const products = [
   { name: "Радар", price: 1300, quantity: 4 },
   { name: "Сканер", price: 2700, quantity: 3 },
@@ -8,17 +6,16 @@ const products = [
 ];
 
 const getAllPropValues = function (arr, prop) {
-  const arrayValues = [];
+  let array = [];
+ 
+for (let element of arr) {
+ if( prop in element) {
+ 
+  array.push(element[prop]);
+ }
+}  
 
-  for (let element of arr) {
-    let value = element[prop];
-
-    if (value !== undefined) {
-      arrayValues.push(value);
-    }
-  }
-
-  return arrayValues;
+  return array;
 };
 
 console.log(getAllPropValues(products, "name"));
