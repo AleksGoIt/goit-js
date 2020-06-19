@@ -6,13 +6,13 @@ const products = [
 ];
 
 const calculateTotalPrice = function (allProdcuts, productName) {
-  // let total = 0;
+ 
   for (let product of allProdcuts) {
     if (product.name === productName) {
       return product.price * product.quantity;
     }
   }
-  // return (total = "No such product");
+  
 };
 
 console.log(calculateTotalPrice(products, "Радар"));

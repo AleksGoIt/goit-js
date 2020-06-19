@@ -6,12 +6,12 @@ const products = [
 ];
 
 const getAllPropValues = function (arr, prop) {
-  let array = [];
+  const array = [];
  
-for (let element of arr) {
- if( prop in element) {
+for (const iten of arr) {
+ if( prop in iten) {
  
-  array.push(element[prop]);
+  array.push(iten[prop]);
  }
 }  
 
