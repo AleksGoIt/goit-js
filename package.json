@@ -1,0 +1,29 @@
+{
+  "name": "goit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "lodash": "^4.17.19",
+    "lodash.throttle": "^4.1.1",
+    "npm-check-updates": "^7.0.2",
+    "validator": "^13.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "webpack-dev-server --env.mode development --config ./webpack/config.js",
+    "build": "webpack --env.mode production --config ./webpack/config.js",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AleksGoIt/goit-js.git"
+  },
+  "author": "https://github.com/AleksGoIt/goit-js <YOUR_EMAIL>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AleksGoIt/goit-js/issues"
+  },
+  "homepage": "https://github.com/AleksGoIt/goit-js#readme"
+}
