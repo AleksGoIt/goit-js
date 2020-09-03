@@ -15,7 +15,7 @@ body {
 }
 .gallery__img {
   width: 100%;
-  display: block;
+  display:block;
 }
 
 #validation-input {
